@@ -1,6 +1,6 @@
 {
   "name": "lite-api-cleint",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "A simple and versatile API cleint for making HTTP requests with support for all HTTP methods and custom headers.",
   "main": "src/liteApiCleint.js",
   "scripts": {
