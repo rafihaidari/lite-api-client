@@ -17,44 +17,40 @@ npm install lite-api-client
 Here's how to use the Lite API Client in your project:
 
 ```javascript
-const LiteApiClient = require('lite-api-client');
+const LiteApiClient = require('./src/liteApiClient');
 
 // Initialize the API client
-const api = new LiteApiClient('https://api.example.com');
+const api = new LiteApiClient('https://dummyjson.com');
 
 // Set a default authorization token
-api.setHeader('Authorization', 'Bearer YOUR_TOKEN_HERE');
-
-// Set the API key in the headers
-// Replace 'x-api-key' with the actual header key required by your API
-api.setHeader('x-api-key', 'YOUR_API_KEY_HERE');
+api.setHeader('Content-Type', 'application/json');
 
 // Making requests
 (async () => {
-  try {
-    // GET request with query parameters
-    const users = await api.get('/users', { params: { id: 123 } });
-    console.log('GET /users:', users);
+    try {
+        // GET request with query parameters
+        const posts = await api.get('posts/search', { params: { q: 'love', limit: 1 } });
+        console.log('GET /posts/search:', posts);
 
-    // POST request with data
-    const newUser = await api.post('/users', {
-      name: 'Jane Doe',
-      email: 'jane@example.com',
-    });
-    console.log('POST /users:', newUser);
+        // POST request with data
+        const newPost = await api.post('/posts/add', JSON.stringify({
+            title: 'I am in love with Lite API Cleint.',
+            userId: '1'
+        }));
+        console.log('POST /posts/add:', newPost);
 
-    // PUT request with data
-    const updatedUser = await api.put('/users/123', {
-      name: 'Jane Smith',
-    });
-    console.log('PUT /users/123:', updatedUser);
+        // PUT request with data
+        const updatedPost = await api.put('/posts/1', JSON.stringify({
+            title: 'Lite API Cleint is easy to use.'
+        }));
+        console.log('PUT /users/123:', updatedPost);
 
-    // DELETE request
-    const deleteResponse = await api.delete('/users/123');
-    console.log('DELETE /users/123:', deleteResponse);
-  } catch (error) {
-    console.error('Error:', error);
-  }
+        // // DELETE request
+        const deleteResponse = await api.delete('/posts/1');
+        console.log('DELETE /posts/1', deleteResponse);
+    } catch (error) {
+        console.error('Error:', error);
+    }
 })();
 ```
 
