@@ -1,8 +1,8 @@
-// simpleApiClient.js
+// LiteApiClient.js
 
 const axios = require('axios');
 
-class SimpleApiClient {
+class LiteApiClient {
   constructor(baseURL, defaultHeaders = {}) {
     this.client = axios.create({
       baseURL: baseURL,
@@ -66,4 +66,4 @@ class SimpleApiClient {
   }
 }
 
-module.exports = SimpleApiClient;
+module.exports = LiteApiClient;

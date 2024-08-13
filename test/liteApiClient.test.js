@@ -1,17 +1,17 @@
-// test/simpleApiClient.test.js
+// test/LiteApiClient.test.js
 
-const SimpleApiClient = require('../src/simpleApiClient');
+const LiteApiClient = require('../src/liteApiClient');
 const axios = require('axios');
 const MockAdapter = require('axios-mock-adapter');
 
 // Create a mock adapter instance for axios
 const mock = new MockAdapter(axios);
 
-describe('SimpleApiClient', () => {
+describe('LiteApiClient', () => {
   let api;
 
   beforeEach(() => {
-    api = new SimpleApiClient('https://api.example.com');
+    api = new LiteApiClient('https://api.example.com');
   });
 
   it('should make a GET request', async () => {

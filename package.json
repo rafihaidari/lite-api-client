@@ -1,10 +1,10 @@
 {
-  "name": "simple-api-client",
+  "name": "lite-api-client",
   "version": "1.0.0",
   "description": "A simple and versatile API client for making HTTP requests with support for all HTTP methods and custom headers.",
-  "main": "simpleApiClient.js",
+  "main": "LiteApiClient.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha test/*.test.js",
     "start": "node exampleUsage.js"
   },
   "keywords": [
@@ -19,18 +19,18 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rafihaidari/simple-api-client.git"
+    "url": "git+https://github.com/rafihaidari/lite-api-client.git"
   },
   "bugs": {
-    "url": "https://github.com/rafihaidari/simple-api-client/issues"
+    "url": "https://github.com/rafihaidari/lite-api-client/issues"
   },
-  "homepage": "https://github.com/rafihaidari/simple-api-client#readme",
+  "homepage": "https://github.com/rafihaidari/lite-api-client#readme",
   "dependencies": {
     "axios": "^1.7.3"
   },
   "devDependencies": {
-    "mocha": "^10.2.0",
-    "axios-mock-adapter": "^1.21.2"
+    "axios-mock-adapter": "^1.22.0",
+    "mocha": "^10.7.3"
   },
   "engines": {
     "node": ">=12.0.0"

@@ -1,5 +1,5 @@
 ```markdown
-# Simple API Client
+# Lite API Client
 
 A simple and versatile API client for making HTTP requests with support for all HTTP methods and custom headers.
 
@@ -8,18 +8,18 @@ A simple and versatile API client for making HTTP requests with support for all 
 Install the package using npm:
 
 ```bash
-npm install simple-api-client
+npm install lite-api-client
 ```
 
 ## Usage
 
-Here's how to use the Simple API Client in your project:
+Here's how to use the Lite API Client in your project:
 
 ```javascript
-const SimpleApiClient = require('simple-api-client');
+const LiteApiClient = require('lite-api-client');
 
 // Initialize the API client
-const api = new SimpleApiClient('https://api.example.com');
+const api = new LiteApiClient('https://api.example.com');
 
 // Set a default authorization token
 api.setHeader('Authorization', 'Bearer YOUR_TOKEN_HERE');
