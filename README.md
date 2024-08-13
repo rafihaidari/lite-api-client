@@ -54,6 +54,73 @@ api.setHeader('Content-Type', 'application/json');
 })();
 ```
 
+
+
+---
+
+# Using `lite-api-client` in a ReactJS Application
+
+To integrate `lite-api-client` into your ReactJS application, follow the steps below.
+
+#### Installation
+
+First, ensure that the `lite-api-client` package is installed in your project:
+
+```bash
+npm install lite-api-client
+```
+
+or if you prefer using Yarn:
+
+```bash
+yarn add lite-api-client
+```
+
+#### Example Usage in a React Component
+
+Here's an example of how to use `lite-api-client` in a React component to fetch data from an API:
+
+```javascript
+import { useState, useEffect } from 'react';
+import LiteApiClient from 'lite-api-client';
+
+function App() {
+  const [title, setTitle] = useState(null);
+
+  useEffect(() => {
+    // Create an instance of LiteApiClient with the base URL
+    const apiClient = new LiteApiClient('https://dummyjson.com');
+
+    const fetchData = async () => {
+      try {
+        // Make a GET request to the specified endpoint with query parameters
+        const response = await apiClient.get('/posts/search', {
+          params: { q: 'love', limit: 1 },
+        });
+
+        // Set the title state with the fetched data
+        setTitle(response.posts[0].title);
+      } catch (err) {
+        // Handle errors
+        console.log(err);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  return (
+    <>
+      <h1>npm i lite-api-client</h1>
+      <div className="card">Title: {title}</div>
+    </>
+  );
+}
+
+export default App;
+```
+
+
 ## API Methods
 
 - **setHeader(key, value)**: Set or update a custom header.
