@@ -17,7 +17,7 @@ npm install lite-api-client
 Here's how to use the Lite API Client in your project:
 
 ```javascript
-const LiteApiClient = require('./src/liteApiClient');
+const LiteApiClient = require('lite-api-client');
 
 // Initialize the API client
 const api = new LiteApiClient('https://dummyjson.com');
