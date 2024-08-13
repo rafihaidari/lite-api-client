@@ -1,4 +1,4 @@
-```markdown
+
 # Lite API Client
 
 A simple and versatile API client for making HTTP requests with support for all HTTP methods and custom headers.
@@ -10,6 +10,7 @@ Install the package using npm:
 ```bash
 npm install lite-api-client
 ```
+
 
 ## Usage
 
@@ -77,4 +78,3 @@ Contributions are welcome! Please open issues or submit pull requests on GitHub.
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-```
