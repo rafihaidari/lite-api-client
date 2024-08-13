@@ -1,7 +1,7 @@
-const LiteApiClient = require('./src/liteApiClient');
+const LiteApiCleint = require('./src/liteApiCleint');
 
-// Initialize the API client
-const api = new LiteApiClient('https://dummyjson.com');
+// Initialize the API cleint
+const api = new LiteApiCleint('https://dummyjson.com');
 
 // Set a default authorization token
 api.setHeader('Content-Type', 'application/json');

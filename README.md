@@ -1,26 +1,26 @@
 
-# Lite API Client
+# Lite API Cleint
 
-A simple and versatile API client for making HTTP requests with support for all HTTP methods and custom headers.
+A simple and versatile API cleint for making HTTP requests with support for all HTTP methods and custom headers.
 
 ## Installation
 
 Install the package using npm:
 
 ```bash
-npm install lite-api-client
+npm install lite-api-cleint
 ```
 
 
 ## Usage
 
-Here's how to use the Lite API Client in your project:
+Here's how to use the Lite API Cleint in your project:
 
 ```javascript
-const LiteApiClient = require('lite-api-client');
+const LiteApiCleint = require('lite-api-cleint');
 
-// Initialize the API client
-const api = new LiteApiClient('https://dummyjson.com');
+// Initialize the API cleint
+const api = new LiteApiCleint('https://dummyjson.com');
 
 // Set a default authorization token
 api.setHeader('Content-Type', 'application/json');
