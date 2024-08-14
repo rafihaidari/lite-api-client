@@ -1,10 +1,10 @@
-// LiteApiCleint.js
+// LiteApiClient.js
 
 const axios = require('axios');
 
-class LiteApiCleint {
+class LiteApiClient {
   constructor(baseURL, defaultHeaders = {}) {
-    this.cleint = axios.create({
+    this.client = axios.create({
       baseURL: baseURL,
       headers: defaultHeaders,
     });
@@ -12,18 +12,18 @@ class LiteApiCleint {
 
   // Set or update a header
   setHeader(key, value) {
-    this.cleint.defaults.headers.common[key] = value;
+    this.client.defaults.headers.common[key] = value;
   }
 
   // Remove a header
   removeHeader(key) {
-    delete this.cleint.defaults.headers.common[key];
+    delete this.client.defaults.headers.common[key];
   }
 
   // General method for making requests
   async request(method, url, { params = {}, data = {}, headers = {} } = {}) {
     try {
-      const response = await this.cleint.request({
+      const response = await this.client.request({
         method,
         url,
         params,
@@ -66,4 +66,4 @@ class LiteApiCleint {
   }
 }
 
-module.exports = LiteApiCleint;
+module.exports = LiteApiClient;

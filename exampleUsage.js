@@ -1,7 +1,7 @@
-const LiteApiCleint = require('./src/liteApiCleint');
+const LiteApiClient = require('./src/liteApiClient');
 
-// Initialize the API cleint
-const api = new LiteApiCleint('https://dummyjson.com');
+// Initialize the API Client
+const api = new LiteApiClient('https://dummyjson.com');
 
 // Set a default authorization token
 api.setHeader('Content-Type', 'application/json');
@@ -15,14 +15,14 @@ api.setHeader('Content-Type', 'application/json');
 
         // POST request with data
         const newPost = await api.post('/posts/add', JSON.stringify({
-            title: 'I am in love with Lite API Cleint.',
+            title: 'I am in love with Lite API Client.',
             userId: '1'
         }));
         console.log('POST /posts/add:', newPost);
 
         // PUT request with data
         const updatedPost = await api.put('/posts/1', JSON.stringify({
-            title: 'Lite API Cleint is easy to use.'
+            title: 'Lite API Client is easy to use.'
         }));
         console.log('PUT /users/123:', updatedPost);
 

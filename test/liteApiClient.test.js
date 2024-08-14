@@ -1,17 +1,17 @@
-// // test/LiteApiCleint.test.js
+// // test/LiteApiClient.test.js
 
-// const LiteApiCleint = require('../src/liteApiCleint');
+// const LiteApiClient = require('../src/liteApiClient');
 // const axios = require('axios');
 // const MockAdapter = require('axios-mock-adapter');
 
 // // Create a mock adapter instance for axios
 // const mock = new MockAdapter(axios);
 
-// describe('LiteApiCleint', () => {
+// describe('LiteApiClient', () => {
 //   let api;
 
 //   beforeEach(() => {
-//     api = new LiteApiCleint('https://api.example.com');
+//     api = new LiteApiClient('https://api.example.com');
 //   });
 
 //   it('should make a GET request', async () => {

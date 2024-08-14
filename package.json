@@ -1,8 +1,8 @@
 {
-  "name": "lite-api-cleint",
-  "version": "1.6.0",
-  "description": "A simple and versatile API cleint for making HTTP requests with support for all HTTP methods and custom headers.",
-  "main": "src/liteApiCleint.js",
+  "name": "lite-api-client",
+  "version": "1.7.0",
+  "description": "A simple and versatile API client for making HTTP requests with support for all HTTP methods and custom headers.",
+  "main": "src/liteApiClient.js",
   "scripts": {
     "test": "mocha test/*.test.js",
     "start": "node exampleUsage.js"
@@ -11,7 +11,7 @@
     "api",
     "http",
     "axios",
-    "cleint",
+    "client",
     "requests",
     "fetch"
   ],
@@ -19,12 +19,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rafihaidari/lite-api-cleint.git"
+    "url": "git+https://github.com/rafihaidari/lite-api-client.git"
   },
   "bugs": {
-    "url": "https://github.com/rafihaidari/lite-api-cleint/issues"
+    "url": "https://github.com/rafihaidari/lite-api-client/issues"
   },
-  "homepage": "https://github.com/rafihaidari/lite-api-cleint#readme",
+  "homepage": "https://github.com/rafihaidari/lite-api-client#readme",
   "dependencies": {
     "axios": "^1.7.3"
   },
