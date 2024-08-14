@@ -43,11 +43,11 @@ api.setHeader('Content-Type', 'application/json');
         const updatedPost = await api.put('/posts/1', JSON.stringify({
             title: 'Lite API Client is easy to use.'
         }));
-        console.log('PUT /users/123:', updatedPost);
+        console.log('PUT /posts/1:', updatedPost);
 
         // // DELETE request
         const deleteResponse = await api.delete('/posts/1');
-        console.log('DELETE /posts/1', deleteResponse);
+        console.log('DELETE /posts/1:', deleteResponse);
     } catch (error) {
         console.error('Error:', error);
     }
@@ -121,11 +121,8 @@ export default App;
 ```
 
 
-## API Methods
+# API Methods
 
-- **setHeader(key, value)**: Set or update a custom header.
-- **removeHeader(key)**: Remove a custom header.
-- **request(method, url, options)**: Make a general request with the specified method.
 - **get(url, options)**: Make a GET request.
 - **post(url, data, options)**: Make a POST request.
 - **put(url, data, options)**: Make a PUT request.
